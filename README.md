@@ -1,14 +1,23 @@
-# FWERKOR MediaUpload
+# FWERKOR Media Upload
 
-A small WordPress plugin for managing and diagnosing media upload limits.
-
-It does not pretend WordPress can bypass PHP. The effective limit is always the smaller of the configured WordPress limit and the PHP upload/post limits.
+Reliable chunked large-file uploads for the WordPress media library.
 
 ## Features
-- Configurable Media upload limit
-- Shows the PHP ceiling and effective limit
-- Rejects oversized uploads with a clear error
-- No telemetry
-- No site-specific hostname or configuration
 
-Production servers should set upload_max_filesize and post_max_size to the intended ceiling.
+- Dedicated Media > Large Upload page
+- 512 KiB chunks, avoiding the normal single-request PHP upload limit
+- Configurable maximum file size (2 GiB by default)
+- WordPress capability, nonce, MIME and filename validation
+- Normal WordPress attachments and generated metadata
+- Drag-and-drop, multi-file progress, and stale upload cleanup
+- No external service and no site-specific hostname
+
+The standard WordPress uploader is left unchanged. Large files should use the plugin's chunked upload page.
+
+## Requirements
+
+WordPress 6.0+ and PHP 8.0+.
+
+## License
+
+GPL-2.0-or-later.
