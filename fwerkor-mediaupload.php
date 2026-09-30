@@ -3,7 +3,7 @@
  * Plugin Name: FWERKOR Media Upload
  * Plugin URI: https://github.com/fwerkor/wordpress-plugin-fwerkor-mediaupload
  * Description: Reliable chunked large-file uploads for the WordPress media library.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: FWERKOR
  * License: GPL-2.0-or-later
  * Requires at least: 6.0
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
 final class FWERKOR_Media_Upload {
     private const OPTION_MAX_MB = 'fwerkor_mediaupload_max_mb';
     private const REST_NS = 'fwerkor-mediaupload/v1';
-    private const VERSION = '1.0.0';
+    private const VERSION = '1.0.1';
 
     public function __construct() {
         add_action('admin_menu', array($this, 'menu'));
